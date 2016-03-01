@@ -20,7 +20,7 @@ original String
 char * get_sub_string(char *str, int i, int j){
 
 	//char *sub_string = (char *)malloc((j - i + 1)* sizeof(char));
-	//int m = 0, n, p = 0, flag = 0;
+	//int m = 0, n, n = 0, flag = 0;
 	if (str == NULL)
 	{
 		return NULL;
@@ -30,11 +30,11 @@ char * get_sub_string(char *str, int i, int j){
 		return NULL;
 	}
 	char *sub_string = (char *)malloc((j - i + 1)* sizeof(char));
-	int m = 0, n, p = 0;
-	for (m = i, p = 0; m <= j; m++, p++)
+	int m = 0, n = 0; 
+	for (m = i, n = 0; m <= j; m++, n++)
 	{
-		sub_string[p] = str[m];
+		sub_string[n] = str[m];
 	}
-	sub_string[p] = '\0';
+	sub_string[n] = '\0';
 	return sub_string;
 }
